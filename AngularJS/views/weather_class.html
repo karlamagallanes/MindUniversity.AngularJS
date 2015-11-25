@@ -1,0 +1,33 @@
+<html ng-app="weatherApp">
+    <head>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <title>MindUniversity - AngularJS</title>
+    </head>
+    <body>
+        <div ng-controller="WeatherClassController" class="container">
+            <p>{{url}}</p>
+            City:<input type="text" ng-model="city">
+            <input type="button" ng-click="loadWeather()" value="GetWeather" class="btn btn-primary">
+            <table class="table">
+                <thead>
+                    <th>Date</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th></th>
+                </thead>
+                <tr ng-repeat="day in data.list">
+                    <td>{{day.dt_txt}}</td>
+                    <td>{{day.main.temp_min - 273 || number:2}}</td>
+                    <td>{{day.main.temp_max - 273 || number:2}}</td>
+                    <td>{{day.weather[0].description}}</td>
+                </tr><tbody>
+                </tbody>
+            </table>
+           {{data}}
+            
+        </div>
+        <script src="../js/vendor/angular.js"></script>
+        <script src="../js/common/Header.js"></script>
+            <script src="../js/controllers/WeatherClassController.js"></script>
+    </body>
+</html>
