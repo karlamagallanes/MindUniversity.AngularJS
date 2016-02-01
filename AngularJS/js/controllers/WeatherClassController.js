@@ -8,10 +8,10 @@ app.controller('WeatherClassController', function ($scope, $http) {
             
         $http.get(url)
             .success(function (response) {
-            $scope.data = response;
-        })
-        .error(function(response){
-            $scope.errores=response;
-        })
+                $scope.data = response;
+            })
+            .error(function(response){
+                $scope.errores = response;
+            })
     }
 });

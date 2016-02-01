@@ -4,7 +4,7 @@
         <title>MindUniversity - AngularJS</title>
     </head>
     <body>
-        <div ng-controller="WeatherClassController" class="container">
+        <div ng-controller="WeatherClassController" class="container" ng-init="loadWeather()">
             <p>{{url}}</p>
             City:<input type="text" ng-model="city">
             <input type="button" ng-click="loadWeather()" value="GetWeather" class="btn btn-primary">
@@ -28,6 +28,6 @@
         </div>
         <script src="../js/vendor/angular.js"></script>
         <script src="../js/common/Header.js"></script>
-            <script src="../js/controllers/WeatherClassController.js"></script>
+        <script src="../js/controllers/WeatherClassController.js"></script>
     </body>
 </html>

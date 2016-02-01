@@ -1,0 +1,22 @@
+Session 2 Angular JS (review)
+
+objetivo del curso: Crear app e-commerce
+
+ - Directivas Angular
+ - Filtros (propios)
+
+Directivas ng-app, dependency injection, crear controlador (ng-controller) y se agrego desde js.
+
+
+
+injeccion dependencias $scope, $http
+
+filtros
+
+
+prox session: directivas 
+4: rutas
+5: servicios
+
+servicio abierto.
+

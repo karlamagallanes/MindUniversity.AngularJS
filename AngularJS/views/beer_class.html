@@ -1,0 +1,38 @@
+<html ng-app="beerStoreApp">
+ 
+<head>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <title>Mind University - AngularJS</title>
+</head>
+ 
+<body>
+        <div ng-controller="HomeLectureController" class="container">
+            <h1 class="btn-group" role="group">
+                <a ng-class="'All' == selectedBeerType? 'btn btn-primary':'btn btn-default'" ng-click="setBeerType('All')">All</a>
+                
+                <a ng-class="beer.BeerType == selectedBeerType? 'btn btn-primary':'btn btn-default'" ng-click="setBeerType(beer.BeerType)" ng-repeat="beer in beers | unique:'BeerType'">{{beer.BeerType}}</a>
+            </h1>      
+                        
+            <div>
+                <h4>Beer List<small>{{beers.length}} beers found</small></h4>
+               <div ng-repeat="beer in beers | beerFilter: selectedBeerType:selectedBeerBrand">
+                    <span class="font-weight:bold">{{beer.Name}} - {{beer.Brand}}</span>
+                    <p>{{beer.Description}}</p>
+                   
+                   <ol><li ng-repeat="review in beer.Reviews">{{review}}</li></ol>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+        </div>
+        <script type="text/javascript" src="../js/vendor/angular.js"></script>
+        <script type="text/javascript" src="../js/vendor/angular-filter.min.js"></script>
+        <script type="text/javascript" src="../js/common/Header.js"></script>
+        <script type="text/javascript" src="../js/filters/beerFilter.js"></script>
+        <script type="text/javascript" src="../js/controllers/HomeLectureController.js"></script>
+</body>
+ 
+</html>

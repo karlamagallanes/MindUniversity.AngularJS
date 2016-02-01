@@ -1,6 +1,8 @@
 var appid = "2de143494c0b295cca9337e1e96b00e0";
  
  
+var app = angular.module('beerStoreApp', ["angular.filter"]);
+
 if (!String.prototype.format) {
   String.prototype.format = function() {
     var args = arguments;
